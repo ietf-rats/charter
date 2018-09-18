@@ -75,7 +75,7 @@ Note that Claims are non-proven assertions as opposed to Attestation Evidence.
 The problem statement addressed by the working group can be segregated into four inter-connected problems:
 
 (1) Establishing a sufficient level of confidence that a communication partner is a trustworthy endpoint. This is a fundamental challenge.
-Currently, there are no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguishes a trusted execution environment over one that isn't. There isn't agreement on how to convey it appropriately, how to appraise evidence and how to present the appraisal results in an interoperable fashion.
+Currently, there are no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguishes a trustworthy execution environment over one that isn't. There isn't agreement on how to convey it appropriately, how to appraise evidence and how to present the appraisal results in an interoperable fashion.
 In essence, there is increasing vendor demand for an overall communication, trust and assurance model to establish trust in potentially lying endpoints that is not currently met by other standards.
 
 (2) Current and emerging protocols oftentimes do not contain interfaces for trust establishment in the communication endpoints.
