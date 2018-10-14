@@ -58,6 +58,6 @@ In summary, the goals addressed by the RATS working group are:
 
 4. Information elements for use in evidence-based attestation; serialization in CBOR and JSON; including YANG-based modules
 
-5. CWT claim definitions for use in pass-based attestation tokens (EAT)
+5. CWT claim definitions for use in pass-based attestation tokens (e.g. EAT) to enable Attester and Verifier duties
 
 6. Time-based Unidirectional Attestation: interaction models, information elements, YANG modules.
