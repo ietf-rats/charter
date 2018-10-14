@@ -2,25 +2,25 @@
 
 Remote ATtestation ProcedureS (RATS) are included in network protocols to provide the basis for establishing trustworthy exchanges with a device.
 RATS expose device characteristics in the form of trusted claim sets (based on Proof-of-Possession) to detailed Attestation Evidence (Proof-of-Protection) that enable a Verifying Parties to retrace every step that led to its current Operational State. A consequence of this retracing is that it is possible to appraise the trustworthiness of a device.
-RATS provide evidence that a device supports a set of operations and functions  nd/or that it is actually the exact device it is supposed to be (Attestation Provenance).
+RATS provide evidence that a device supports a certain set of operations and functions nd/or that it is actually the exact device it is supposed to be (Attestation Provenance) via identity documents or passes.
 RATS ensure that the information conveyed is unique, complete, and fresh (exposing tampering, replay, and/or relay attacks).
 Application of RATS encompasses infrastructure supporting financial transactions, critical infrastructure, constrained-node environments, or the management of end-user devices.
 
 Measured file execution procedures (including the now deprecated term Secure Boot) provide the basis for conveying additional device characteristics that enable a Verifying Party to assess that a device is a Trusted System: one that operates as expected, does what is required, and does not do other things.
-Various Roots of Trust (e.g. for Measurement, for Reporting, or for Verification) provide the foundation to enable Implicit Attestation (the fact that a secret key is accessible implies specific meaning) and Explicit Attestation, which uses the output of Measured file execution as Attestation Evidence which along with event Log details can be used to can ratify that the device is actually a Trusted System.
+Various Roots of Trust (e.g. for Measurement, for Reporting, or for Verification) provide the foundation to enable Implicit Remote Attestation (the fact that a secret key is accessible implies specific meaning and specific assertions are optional) and Explicit Remote Attestation, which uses the output of measured file execution as Attestation Evidence which can be used (along with event log details) to ratify that the device is actually a Trusted System.
 
 RATS also incorporate Verifying Parties that are capable of explicit appraisal of the Attestation Evidence conveyed - in contrast to the implicit validation of device characteristics enabled by Relying Parties.
 In order to do so, Reference Values - typically provided by Trusted Third Parties - are required.
-If an Operational State is the result of an indeterministic file execution procedure, secure audit logs (e.g. a canonical event logs) of recent or past events have to be included in conveyed Attestation Evidence to enable an appropriate appraisal.
-Appraisal of Attestation Evidence also requires semantic context about explicit verification rules (local and remote) in order to establish a sufficient level of confidence in the trustworthiness of an attesting device (Attester).
+If an Operational State is the result of an indeterministic file execution procedure, secure audit logs (e.g. a canonical event logs) of recent or past events have to be conveyed securely alongside Attestation Evidence to enable an appropriate appraisal.
+Appraisal of Attestation Evidence also requires semantic context about explicit verification rules (local or remote) in order to establish a sufficient level of confidence in the trustworthiness of an attesting device (Attester).
 
 # Problem Statement
 
-(1) A standardized way to establish a sufficient level of confidence that a communication partner is a trustworthy endpoint. This is a fundamental challenge.
+(1) A standardized way to establish a sufficient level of confidence that some data originates from a trustworthy device (e.g., platforms, servers, user endpoints, IoT devices, device subsystems or subcomponents) designed to support a specific set of operations/functionalities a communication partner is a trustworthy endpoint. This is a fundamental challenge.
 
-a. In 2018, there were no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguishes a trustworthy computing context (e.g. an execution environment) over one that is not.
+(1a) In 2018, there were no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguishes a trustworthy computing context (e.g. execution environments or a specific set of operations/functions supported) over one that is not.
 
-b. There is no general agreement on how to convey these appropriately, how to appraise the evidence and how to present the appraisal results in an interoperable fashion. In essence, there is increasing demand for an overall communication, trust and assurance model to establish trust in potentially lying endpoints that is not currently met by other standards.
+(1b) There is no general agreement on how to convey these appropriately, how to appraise the evidence and how to present the appraisal results in an interoperable fashion. In essence, there is increasing demand for an overall communication, trust and assurance model to establish trust in potentially lying endpoints that is not currently met by other standards.
 
 (2) In 2018, there are no common, standard ways for Relying Parties to know the provenance and characteristics of a device (e.g., an end-user device, platform or endpoint, servers, IoT devices, device subsystems and sub-modules) that may be requesting services.
 
