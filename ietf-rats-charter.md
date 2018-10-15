@@ -16,7 +16,7 @@ rats@ietf.org
 
 Traditional uses of asymmetric cryptography introduce proof-of-possession techniques that prove to the verifier that the authenticator possesses the private key. Authentication presumes some protection: e.g., that there is not an illicit copy of the private key available to anyone other than the intended subject. More generally, authentication of a system is not useful if it can readily be taken over by an attacker. Proof-of-possession techniques do not describe mechanisms for ascertaining the protection of the system and its integrity, and for conveying evidence about that (“proof-of-protection” henceforth). 
 
-The details of these mechanisms vary between implementations, including what kinds of trust are being generated and what entities need to cooperate to create and verify this proof-of-protection. They, however, all need network protocols to interconnect the entities that need to work together.  The RATS effort strives to provide evidence about a system's health and trustworthiness via the Internet.  Instead of having a separate set of protocols for each set of mechanisms, the RATS effort will define a common set of protocols that can be used interoperably over the Internet.
+The details of these mechanisms vary between implementations, including what kinds of trust are being generated and what entities need to cooperate to create and verify this proof-of-protection. They, however, all need network protocols to interconnect the entities that need to work together.  The RATS effort strives to provide evidence about a system's health and trustworthiness via standard communications protocols.  Instead of having a separate set of protocols for each set of mechanisms, the RATS effort will define a common set of protocols that can be used interoperably.
 
 ## (Background)
 
@@ -30,7 +30,8 @@ Attestation has two fundamental ways of operating, Remote Attestation and Local 
 * *Remote Attestation* is where the Attester conveys Attestation Evidence to a Verifier that compares it with Reference Values (in order for it to be considered, for example, healthy)
 A Relying Party (or the Verifier acting as a Relying Party) appraises the verification result to assess device trustworthiness and to manage security risk.
 The Verifier is typically physically remote from the Attester and the conveyance method often involves a network protocol.
-* *Local Attestation* is where trustworthiness is determined locally on the device. For example, access to application configuration files may be predicated on the correct operating system having been booted.
+* *Local Attestation* is where trustworthiness is determined locally on the device or within a local network. For example, access to application configuration files may be predicated on the correct operating system having been booted.  Another example
+is where a gateway or router verifies the trustworthiness of a device on behalf of a remote party.
 Local Attestation may not rely on an external conveyance method to determine trustworthiness.
 Nevertheless, a remote Relying Party (or trusted third party) may be responsible for supplying attestation policies that are applied locally.
 
@@ -45,7 +46,7 @@ Remote Attestation Procedures have multiple facets, including but not limited to
 * A method to protect Attestation Evidence during storage and conveyance, as well as to prove its integrity and freshness.
 
 Attestation is scoped from small, resource-constrained devices to less constrained devices such as servers, rackscale systems, or services in a cloud.
-Both types of attestation may be used by any system, though it is assumed likely that more constrained systems that are a relying party are less likely to also take on the role of a Verifier (and therefore are "off-loading the burden of appraisal").
+Both types of attestation may be used by any system, though it is assumed likely that resource-constrained relying parties are less likely to also take on the role of a Verifier (and therefore are "off-loading the burden of appraisal").
 Use of both Explicit and Implicit Attestation mechanisms together may also be done.
 
 Generally speaking, attestation is applied before data is exchanged to avoid disclosure to insufficiently trusted environments.
@@ -75,11 +76,14 @@ Note that Claims are non-proven assertions as opposed to Attestation Evidence.
 The problem statement addressed by the working group can be segregated into four inter-connected problems:
 
 (1) Establishing a sufficient level of confidence that a communication partner is a trustworthy endpoint. This is a fundamental challenge.
-Currently, there are no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguishes a trustworthy execution environment over one that isn't. There isn't agreement on how to convey it appropriately, how to appraise evidence and how to present the appraisal results in an interoperable fashion.
+Currently, there are no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguish a trustworthy execution environment over one that isn't. There isn't agreement on how to convey such data appropriately, how to appraise evidence and how to present the appraisal results in an interoperable fashion.
 In essence, there is increasing vendor demand for an overall communication, trust and assurance model to establish trust in potentially lying endpoints that is not currently met by other standards.
 
 (2) Current and emerging protocols oftentimes do not contain interfaces for trust establishment in the communication endpoints.
-Some protocols may contain extensibility features that could serve this purpose, but have not yet been defined.
+Some protocols may contain extensibility features that could serve this purpose, but have not yet been defined.  Moreover, 
+there are no interoperable message formats that allow resource-constrained devices that lack internet communications capability
+(but may include support for other communications protocols, e.g. Bluetooth)
+to convey Reference Values and Attestation Evidence to internet-connected Relying Parties.
 
 (3) There is no central alignment process or place for resolving issues related to the application of remote attestation techniques to existing and emerging IETF protocols, e.g. Initial Implicit Attestation via TLS Token Binding, complementary Attestation in OSCORE, YANG modules for conveying Explicit Attestation Evidence about composite devices (e.g. I-D.birkholz-yang-basic-remote-attestation), the Attestation procedures for virtualized network security functions in I2NSF (I-D.pastor-i2nsf-nsf-remote-attestation), or Time-Based Uni-Directional Attestation procedures (e.g. I-D.birkholz-i2nsf-tuda).
 
