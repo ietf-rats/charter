@@ -2,7 +2,7 @@
 
 Remote ATtestation ProcedureS (RATS) are included in network protocols to provide the basis for establishing trustworthy exchanges with a device.
 RATS expose device characteristics in the form of trusted claim sets (based on Proof-of-Possession) to detailed Attestation Evidence (Proof-of-Protection) that enable a Verifying Parties to retrace every step that led to its current Operational State. A consequence of this retracing is that it is possible to appraise the trustworthiness of a device.
-RATS provide evidence that a device supports a certain set of operations and functions nd/or that it is actually the exact device it is supposed to be (Attestation Provenance) via identity documents or passes.
+RATS provide evidence that a device supports a certain set of operations and functions and/or that it is actually the exact device it is supposed to be (Attestation Provenance) via identity documents or passes.
 RATS ensure that the information conveyed is unique, complete, and fresh (exposing tampering, replay, and/or relay attacks).
 Application of RATS encompasses infrastructure supporting financial transactions, critical infrastructure, constrained-node environments, or the management of end-user devices.
 
@@ -16,7 +16,7 @@ Appraisal of Attestation Evidence also requires semantic context about explicit 
 
 # Problem Statement
 
-(1) A standardized way to establish a sufficient level of confidence that some data originates from a trustworthy device (e.g., platforms, servers, user endpoints, IoT devices, device subsystems or subcomponents) designed to support a specific set of operations/functionalities a communication partner is a trustworthy endpoint. This is a fundamental challenge.
+(1) A standardized way to establish a sufficient level of confidence that some data originates from a trustworthy device (e.g., platforms, servers, user endpoints, IoT devices, device subsystems or subcomponents) designed to support a specific set of operations/functionalities . This is a fundamental challenge.
 
 (1a) In 2018, there were no agreed upon standards that define a minimal set of Reference Values and Attestation Evidence that distinguishes a trustworthy computing context (e.g. execution environments or a specific set of operations/functions supported) over one that is not.
 
@@ -24,7 +24,9 @@ Appraisal of Attestation Evidence also requires semantic context about explicit 
 
 (2) In 2018, there are no common, standard ways for Relying Parties to know the provenance and characteristics of a device (e.g., an end-user device, platform or endpoint, servers, IoT devices, device subsystems and sub-modules) that may be requesting services.
 
-As a result, in 2018, a Relying Party would be unable to tell if a device is trying to mimic the identity of another device or some of its characteristics.
+As a result, in 2018, there is no common way allowing Relying Parties to tell if some data originates from a trustworthy device (e.g. a Trusted System designed to support a specific set of operations/functionalities or not).
+
+a Relying Party would be unable to tell if a device is trying to mimic the identity of another device or some of its characteristics.
 
 In 2018, there are existing domain-specific ways to do this, such as TCG TPM Attestation, FIDO Alliance attestation and Android Keystore Attestation.
 
@@ -38,7 +40,7 @@ In summary, the goals addressed by the RATS working group are:
 
 1. Definition of inter-operable, cross-platform Assertions based on an unified terminology such that they can be asserted by Entities and substantiated with Attestation Evidence
 
-2. Syntax for each Assertion in CBOR, JSON, YANG, and potentially others. 
+2. Syntax for each Assertion in CBOR, JSON, potentially YANG modeled, and potentially others
 
 3. A framework for the construction of Evidence (e.g. embedded asymmetric key pair), associating Evidence with Assertions (e.g. signing) and for conveying Evidence and Assertions to Relying Parties, Validators, or Verifiers
   * A definition of the Assertions independent of the means of Conveyance (e.g., independent of the transfer protocol)
@@ -54,10 +56,10 @@ In summary, the goals addressed by the RATS working group are:
 
 2. RATS information flow templates and corresponding architecture (to be developed in parallel with solution documents; can be separate document or merged with 1 above, intended to be published last)
 
-3. Privacy Analysis (similar to 1, separate and/or included in the solution documents below)
+3. Privacy Analysis (similar to 1., separate and/or included in the solution documents below)
 
 4. Information elements for use in evidence-based attestation; serialization in CBOR and JSON; including YANG-based modules
 
 5. CWT claim definitions for use in pass-based attestation tokens (e.g. EAT) to enable Attester and Verifier duties
 
-6. Time-based Unidirectional Attestation: interaction models, information elements, YANG modules.
+6. Time-based Unidirectional Attestation: interaction models, information elements, YANG modules
