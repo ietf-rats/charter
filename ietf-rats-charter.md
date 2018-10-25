@@ -3,6 +3,7 @@
 Remote attestation procedures (RATS) establish trust in the trustworthiness of devices and services. There is high demand for network protocols that not only provide strong authentication but also trusted assertions about the communication partner. To improve the confidence in a communication partner's trustworthiness a relying party requires trusted claims or specific evidence about:
 
 * device identity,
+* device composition, including sub-modules and roots of trust,
 * claim origination/provenance,
 * manufacturing origin,
 * system integrity,
@@ -19,7 +20,7 @@ The Working Group will define:
 
 1. Standardized and interoperable mechanisms to establish a sufficient level of confidence that data originates from trustworthy systems designed to support a specific set of operations/functionalities.
 
-2. Standardized and interoperable mechanisms building on (1.) to allow relying parties to know the attestation provenance and characteristics with respect to systems that may request services or provide information to the relying party.
+2. Standardized and interoperable mechanisms building on (1.) to allow relying parties to know the attestation provenance and characteristics with respect to systems from which it may request services, consume information or to which a relying party may provide information.
 
 The Working Group will maintain close relationships with bodies undertaking complementary work streams in the area of remote attestation, such as GlobalPlatform, Trusted Computing Group, and FIDO Alliance.
 
