@@ -42,6 +42,8 @@ using modeling languages, such as:
 * YANG [RFC6020]
 * CDDL [I-D.ietf-cbor-cddl]
 
+while retaining interoperability with existing formats based on ASN.1, where claim semantics are the same (or have sufficient semantic similarity that warrants semantic interoperability).
+
 while retaining interoperability with existing formats based on ASN.1, if possible and feasible.
 
 3. Specify interoperable mechanisms to protect claims which may need to be protected from unauthorised disclosure for privacy and/or security reasons (e.g. via a root of trust of storage).
