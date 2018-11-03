@@ -41,26 +41,16 @@ The working group will develop standards supporting interoperable remote attesta
 
 1. Specify an architecture establishing a common terminology for remote attestation, identifying mechanisms how to form trust relationships between system components and the relying parties via trusted introduction, and enumerating use-cases for remote attestation.
 
-2. Specify interoperable cross-platform claims which provide information about system components scoped by the specified use-cases --- extending the set of claims defined in RFC7519 and RFC8392. The specification will describe the syntax for each claim in at least the following formats:
+2. Specify information model for assertions/claims which provide information about system components characteristics scoped by the specified use-cases. 
 
-    * CBOR [RFC7049]
-    * JSON [RFC7159]
+3. Specify data models that implement the defined information model in formats, such as:
 
-    using modeling languages, such as:
+* CBOR Web Token structures [RFC8392]
+* JSON Web Token structures [RFC7519]
 
-    * YANG [RFC6020]
-    * CDDL [I-D.ietf-cbor-cddl]
-
-    while retaining interoperability with existing formats based on ASN.1, where claim semantics are the same (or have sufficient semantic similarity that warrants semantic interoperability).
-
-3. Specify interoperable mechanisms to protect claims which may need to be protected from unauthorised disclosure for privacy and/or security reasons (e.g. via a root of trust for storage).
-
-4. Specify procedures, protocols, and corresponding claim semantics in support of verification services to validate or appraise claims via reference values within a remote attestation based on measured file execution procedures; supporting:
+4. Specify procedures, protocols, and corresponding assertion semantics in support of verification services to validate or appraise assertions via reference values within a remote attestation based on measured file execution procedures; supporting:
 
 * Explicit attestation wherein a set of verifiable claims is transported in the attestation, and
 * Implicit attestation wherein a set of claims is implied by possession of a secret.
 
-5. Specify procedures and corresponding service graphs supporting the verification of claims or appraisal of evidence encapsulated in:
-
-* CBOR Web Token structures [RFC8392]
-* JSON Web Token structures [RFC7519]
+5. Specify interoperable mechanisms to protect claims which may need to be protected from unauthorised disclosure for privacy and/or security reasons (e.g. via a root of trust for storage).
