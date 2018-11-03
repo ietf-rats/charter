@@ -17,13 +17,15 @@ To improve the confidence in a system component's trustworthiness a relying part
 
 The RATS model assumes there are system components (e.g., a device, or a device's sub-components) that are relied upon by relying parties to operate in an intended way and/or have intended characteristics.
 
-The problem addressed by the working group is to create and process attestation evidence in a meaningful and believable manner to support relying parties of different manufactures and origin. The challenge is to create syntactic and semantic interoperability to foster a spectrum of attestation ecosystems with respect to:
+The problem addressed by the working group is that there is no common way to create and process attestation evidence in a meaningful and believable manner while also supporting relying parties of different manufactures and origin. The challenge is to create syntactic and semantic interoperability to foster a spectrum of attestation ecosystems with respect to:
 
 * evidence about characteristics and behaviour,
 * workflows that enable the assessment of trustworthiness, and
 * system components that take on corresponding remote attestation procedure roles in these workflows.
 
-In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to tell if data originates from a trustworthy device or not.
+If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise.
+
+In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to acquire evidence to make determinations about the system component.
 
 # Goals
 
@@ -44,12 +46,12 @@ The working group will develop standards supporting interoperable remote attesta
     * CBOR [RFC7049]
     * JSON [RFC7159]
 
-using modeling languages, such as:
+    using modeling languages, such as:
 
     * YANG [RFC6020]
     * CDDL [I-D.ietf-cbor-cddl]
 
-while retaining interoperability with existing formats based on ASN.1, where claim semantics are the same (or have sufficient semantic similarity that warrants semantic interoperability).
+    while retaining interoperability with existing formats based on ASN.1, where claim semantics are the same (or have sufficient semantic similarity that warrants semantic interoperability).
 
 3. Specify interoperable mechanisms to protect claims which may need to be protected from unauthorised disclosure for privacy and/or security reasons (e.g. via a root of trust for storage).
 
