@@ -23,7 +23,10 @@ The problem addressed by the working group is that there is no common way to cre
 * workflows that enable the assessment of trustworthiness, and
 * system components that take on corresponding remote attestation procedure roles in these workflows.
 
-If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise.
+If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise. These procedures include:
+
+* Explicit attestation wherein a set of verifiable claims is transported in the attestation, and
+* Implicit attestation wherein a set of claims is implied by possession of a secret.
 
 In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to acquire evidence to make determinations about the system component.
 
@@ -48,9 +51,8 @@ The working group will develop standards supporting interoperable remote attesta
 * CBOR Web Token structures [RFC8392]
 * JSON Web Token structures [RFC7519]
 
-4. Specify procedures, protocols, and corresponding assertion semantics in support of verification services to validate or appraise assertions via reference values within a remote attestation based on measured file execution procedures; supporting:
+4. Specify interoperable mechanisms to protect assertions/claims which may need to be protected from unauthorised disclosure (e.g. via a root of trust for storage) for privacy and/or security reasons, and for authenticity and integrity.
 
-* Explicit attestation wherein a set of verifiable claims is transported in the attestation, and
-* Implicit attestation wherein a set of claims is implied by possession of a secret.
+5. Specify procedures and network protocols to convey assertions/claims.
 
-5. Specify interoperable mechanisms to protect claims which may need to be protected from unauthorised disclosure for privacy and/or security reasons (e.g. via a root of trust for storage).
+6. Specify procedures and network protocols to appraise attestation evidence via reference values using.
