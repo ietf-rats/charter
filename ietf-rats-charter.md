@@ -55,4 +55,4 @@ The working group will develop standards supporting interoperable remote attesta
 
 5. Specify procedures and network protocols to convey assertions/claims.
 
-6. Specify procedures and network protocols to appraise attestation evidence via reference values using.
+6. Specify procedures and network protocols to appraise attestation evidence via reference values.
