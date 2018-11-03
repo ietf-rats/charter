@@ -7,7 +7,7 @@ To improve the confidence in a system component's trustworthiness a relying part
 * system component identity,
 * composition of system components, including nested components,
 * roots of trust,
-* claim origination/provenance,
+* assertion/claim origination or provenance,
 * manufacturing origin,
 * system component integrity,
 * system component configuration, or
@@ -25,7 +25,7 @@ The problem addressed by the working group is that there is no common way to cre
 
 If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise. These procedures include:
 
-* Explicit attestation wherein a set of verifiable claims is transported in the attestation, and
+* Explicit attestation wherein a set of verifiable assertion/claims is transported in the attestation, and
 * Implicit attestation wherein a set of claims is implied by possession of a secret.
 
 In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to acquire evidence to make determinations about the system component.
@@ -36,7 +36,7 @@ Establishing trust in the assertions originating from system components is a vit
 
 Both evidence and the cryptographic procedures used to establish trust require privacy analysis. This information will be included as appropriate in the deliverable specifications, and may imply extension of procedures defined in other deliverables in support of privacy goals.
 
-The working group will cooperate with the TEEP Working Group, which may generate requirements for claims relevant to TEE.
+The working group will cooperate with the TEEP Working Group, which may generate requirements for assertions/claims relevant to TEE.
 
 # Program of Work
 
