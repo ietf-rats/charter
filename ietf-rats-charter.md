@@ -1,6 +1,6 @@
 # Introduction
 
-Relying parties require evidence about the trustworthiness of remote system components [RFC4949] they interact with. Remote attestation (RATS) procedures enable relying parties to establish a level of confidence in the trustworthiness of remote system components by creating and processing attestation evidence. Based on the provided evidence, a relying party can decide whether to consider a remote system component trustworthy or not.
+Relying parties require evidence about the trustworthiness of remote system components [RFC4949] they interact with. Remote attestation procedures (RATS) enable relying parties to establish a level of confidence in the trustworthiness of remote system components by creating and processing attestation evidence. Based on the provided evidence, a relying party can decide whether to consider a remote system component trustworthy or not.
 
 To improve the confidence in a system component's trustworthiness a relying party may require evidence about:
 
@@ -26,9 +26,9 @@ The problem addressed by the working group is that there is no common way to cre
 If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise. These procedures include:
 
 * Explicit attestation wherein a set of verifiable assertion/claims is transported in the attestation, and
-* Implicit attestation wherein a set of claims is implied by possession of a secret.
+* Implicit attestation wherein a set of assertions/claims is implied by possession of a secret.
 
-In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to acquire evidence to make determinations about the system component.
+In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to acquire evidence to make determinations about the system components.
 
 # Goals
 
@@ -36,7 +36,7 @@ Establishing trust in the assertions originating from system components is a vit
 
 Both evidence and the cryptographic procedures used to establish trust require privacy analysis. This information will be included as appropriate in the deliverable specifications, and may imply extension of procedures defined in other deliverables in support of privacy goals.
 
-The working group will cooperate with the TEEP Working Group, which may generate requirements for assertions/claims relevant to TEE.
+The working group will cooperate with the TEEP Working Group, which may generate requirements for assertions/claims relevant to Trusted Execution Environments (TEE).
 
 # Program of Work
 
