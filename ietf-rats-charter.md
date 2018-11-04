@@ -15,7 +15,7 @@ To improve the confidence in a system component's trustworthiness a relying part
 
 # Scope and Problem Statement
 
-The RATS model assumes there are system components (e.g., a device, or a device's sub-components) that are relied upon by relying parties to operate in an intended way and/or have intended characteristics.
+The RATS model assumes there are system components (e.g., a device, or a device's sub-components) that relying parties can put trust into system components based on evidence how these operate in an intended way and/or have intended characteristics.
 
 The problem addressed by the working group is that there is no common way to create and process attestation evidence in a meaningful and believable manner while also supporting relying parties of different manufactures and origin. The challenge is to create syntactic and semantic interoperability to foster a spectrum of attestation ecosystems with respect to:
 
@@ -23,7 +23,7 @@ The problem addressed by the working group is that there is no common way to cre
 * workflows that enable the assessment of trustworthiness, and
 * system components that take on corresponding remote attestation procedure roles in these workflows.
 
-If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise. These procedures include:
+If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise. These procedures can include:
 
 * Explicit attestation wherein a set of verifiable assertion/claims is transported in the attestation, and
 * Implicit attestation wherein a set of assertions/claims is implied by possession of a secret.
@@ -42,11 +42,11 @@ The working group will cooperate with the TEEP Working Group, which may generate
 
 The working group will develop standards supporting interoperable remote attestation procedures for system components that incorporate roots of trust. The main deliverables are as follows.
 
-1. Specify an architecture establishing a common terminology for remote attestation, identifying mechanisms how to form trust relationships between system components and the relying parties via trusted introduction, and enumerating use-cases for remote attestation.
+1. Specify an architecture establishing a common terminology for remote attestation, identifying mechanisms to form trust relationships between system components and the relying parties via trusted introduction, and enumerating use-cases for remote attestation.
 
 2. Specify information model for assertions/claims which provide information about system components characteristics scoped by the specified use-cases. 
 
-3. Specify data models that implement the defined information model in formats, such as:
+3. Specify data models that implement the defined information model in concrete formats, such as:
 
 * CBOR Web Token structures [RFC8392]
 * JSON Web Token structures [RFC7519]
