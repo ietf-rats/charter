@@ -15,7 +15,7 @@ To improve the confidence in a system component's trustworthiness a relying part
 
 # Scope and Problem Statement
 
-The RATS model assumes there are system components (e.g., a device, or a device's sub-components) that relying parties can put trust into system components based on evidence how these operate in an intended way and/or have intended characteristics.
+The RATS model assumes there are system components (e.g., a device, or a device's sub-components) that relying parties can put trust into based on evidence how these operate in an intended way and/or have intended characteristics.
 
 The problem addressed by the working group is that there is no common way to create and process attestation evidence in a meaningful and believable manner while also supporting relying parties of different manufactures and origin. The challenge is to create syntactic and semantic interoperability to foster a spectrum of attestation ecosystems with respect to:
 
