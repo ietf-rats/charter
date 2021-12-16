@@ -36,9 +36,9 @@ This WG will standardize formats for describing assertions/claims about system
 components and associated evidence; and procedures and protocols to convey
 these assertions/claims to relying parties.  Given the security and privacy
 sensitive nature of these assertions/claims, the WG will specify approaches to
-protect this exchanged data.  While a relying party may use reference, known, or
-expected values or thresholds to assess the assertions/claims, the procedures
-for this activity are out of scope for this WG (without rechartering).
+protect this exchanged data.  A relying party or verifier may use reference,
+known, or expected values or thresholds to assess the assertions/claims.
+Information and data models for this activity are in scope for this WG.
 
 The working group will cooperate and coordinate with other IETF WGs such as
 TEEP, SUIT, and SACM, and work with organizations in the community, such as the TCG
@@ -69,3 +69,6 @@ model (e.g., CBOR Web Token structures [RFC8392], JSON Web Token structures
 [RFC7519]).
 
 5. Standardize interoperable protocols to securely convey assertions/claims.
+
+6. Standardize interoperable data formats to securely convey endorsements
+   and reference values.
