@@ -1,58 +1,71 @@
-# Introduction
+Introduction
+============
 
-Relying parties require evidence about the trustworthiness of remote system components [RFC4949] they interact with. Remote attestation procedures (RATS) enable relying parties to establish a level of confidence in the trustworthiness of remote system components by creating and processing attestation evidence. Based on the provided evidence, a relying party can decide whether to consider a remote system component trustworthy or not.
+In network protocol exchanges, it is often the case that one entity (a relying
+party) requires evidence about the remote peer (and system components [RFC4949]
+thereof), in order to assess the trustworthiness of the peer.  Remote
+attestation procedures (RATS) enable relying parties to establish a level of
+confidence in the trustworthiness of remote system components through the
+creation of attestation evidence by remote system components and a processing
+chain towards the relying party.  A relying party can then decide whether to
+consider a remote system component trustworthy or not.
 
-To improve the confidence in a system component's trustworthiness a relying party may require evidence about:
-
+To improve the confidence in a system component's trustworthiness, a relying
+party may require evidence about:
 * system component identity,
 * composition of system components, including nested components,
 * roots of trust,
 * assertion/claim origination or provenance,
 * manufacturing origin,
 * system component integrity,
-* system component configuration, or
-* operational state and measurements of steps which led to the operational state.
+* system component configuration,
+* operational state and measurements of steps which led to the operational state, or
+* other factors that could influence trust decisions.
 
-# Scope and Problem Statement
+While domain-specific attestation mechanisms such as Trusted Computing Group
+(TCG) Trusted Platform Module (TPM)/Trusted Software Stack (TSS), Fast Identity
+Online (FIDO) Alliance attestation, and Android Keystore attestation exist,
+there is no interoperable way to create and process attestation evidence to
+make determinations about system components among relying parties of different
+manufactures and origins. 
 
-The RATS model assumes there are system components (e.g., a device, or a device's sub-components) that relying parties can put trust into based on evidence how these operate in an intended way and/or have intended characteristics.
+Goals
+=====
 
-The problem addressed by the working group is that there is no common way to create and process attestation evidence in a meaningful and believable manner while also supporting relying parties of different manufactures and origin. The challenge is to create syntactic and semantic interoperability to foster a spectrum of attestation ecosystems with respect to:
+This WG will standardize formats for describing assertions/claims about system
+components and associated evidence; and procedures and protocols to convey
+these assertions/claims to relying parties.  Given the security and privacy
+sensitive nature of these assertions/claims, the WG will specify approaches to
+protect this exchanged data.  While a relying party may use reference, known, or
+expected values or thresholds to assess the assertions/claims, the procedures
+for this activity are out of scope for this WG (without rechartering).
 
-* evidence about characteristics and behaviour,
-* workflows that enable the assessment of trustworthiness, and
-* system components that take on corresponding remote attestation procedure roles in these workflows.
+The working group will cooperate and coordinate with other IETF WGs such as
+TEEP, SUIT, and SACM, and work with organizations in the community, such as the TCG
+and the FIDO Alliance, as appropriate.  The WG will also evaluate prior work
+such as NEA and proprietary attestation technologies like the Android Keystore.
 
-If each ecosystem defines its own procedures and evidence definitions, remote attestation for each use-case is likely to be less well-designed, leading to less accumulation and pooling of security expertise. These procedures can include:
+Program of Work
+===============
 
-* Explicit attestation wherein a set of verifiable assertion/claims is transported in the attestation, and
-* Implicit attestation wherein a set of assertions/claims is implied by possession of a secret.
+The working group will develop standards supporting interoperable remote
+attestation procedures for system components. The main deliverables are as
+follows:
 
-In the absence of such interoperable procedures and specifications, while domain-specific attestation mechanisms such as TCG TPM/TSS, FIDO Alliance attestation and Android Keystore attestation exist, there is no common way for a relying party to acquire evidence to make determinations about the system components.
+1. Specify use cases for remote attestation (to document and achieve WG
+consensus but not expected to be published as an RFC).
 
-# Goals
+2. Specify terminology and architecture that enable attestation techniques.
+The architecture may include a system security model for the signing key
+material and involve at least the system component, system component provider,
+and the relying authority.
 
-Establishing trust in the assertions originating from system components is a vital prerequisite for remote attestation procedures. In consequence, the first goal of this working group is to provide evidence of validity of these assertions via roots of trust [NIST SP 800-164 draft 2012] that support attestation-related operation primitives. The second goal is to create a model that enables remote attestation procedures via trusted third parties, such as repositories of trusted secrets, and full device attestation, such as the assessment of system health via remote integrity verification.
+3. Standardize an information model for assertions/claims which provide
+information about system components characteristics scoped by the specified
+use-cases.
 
-Both evidence and the cryptographic procedures used to establish trust require privacy analysis. This information will be included as appropriate in the deliverable specifications, and may imply extension of procedures defined in other deliverables in support of privacy goals.
+4. Standardize data models that implement and secure the defined information
+model (e.g., CBOR Web Token structures [RFC8392], JSON Web Token structures
+[RFC7519]).
 
-The working group will cooperate with the TEEP Working Group, which may generate requirements for assertions/claims relevant to Trusted Execution Environments (TEE).
-
-# Program of Work
-
-The working group will develop standards supporting interoperable remote attestation procedures for system components that incorporate roots of trust. The main deliverables are as follows.
-
-1. Specify an architecture establishing a common terminology for remote attestation, identifying mechanisms to form trust relationships between system components and the relying parties via trusted introduction, and enumerating use-cases for remote attestation.
-
-2. Specify information model for assertions/claims which provide information about system components characteristics scoped by the specified use-cases. 
-
-3. Specify data models that implement the defined information model in concrete formats, such as:
-
-* CBOR Web Token structures [RFC8392]
-* JSON Web Token structures [RFC7519]
-
-4. Specify interoperable mechanisms to protect assertions/claims which may need to be protected from unauthorised disclosure (e.g. via a root of trust for storage) for privacy and/or security reasons, and for authenticity and integrity.
-
-5. Specify procedures and network protocols to convey assertions/claims.
-
-6. Specify procedures and network protocols to appraise attestation evidence via reference values.
+5. Standardize interoperable protocols to securely convey assertions/claims.
