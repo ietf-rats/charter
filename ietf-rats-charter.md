@@ -37,7 +37,7 @@ components and associated evidence; and procedures and protocols to convey
 these assertions/claims to relying parties.  Given the security and privacy
 sensitive nature of these assertions/claims, the WG will specify approaches to
 protect this exchanged data.  A relying party or verifier may use reference,
-known, or expected values or thresholds to assess the assertions/claims.
+known, endorsed, or expected values or thresholds to assess the assertions/claims.
 Information and data models for this activity are in scope for this WG.
 
 The working group will cooperate and coordinate with other IETF WGs such as
