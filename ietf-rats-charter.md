@@ -70,5 +70,5 @@ model (e.g., CBOR Web Token structures [RFC8392], JSON Web Token structures
 
 5. Standardize interoperable protocols to securely convey assertions/claims.
 
-6. Standardize interoperable data formats to securely convey endorsements
+6. Standardize interoperable data formats to securely declare and convey endorsements
    and reference values.
