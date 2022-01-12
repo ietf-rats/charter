@@ -37,7 +37,7 @@ It will standardize formats for describing evidence and attestation results;
 and the associated procedures and protocols to convey this evidence for appraisal
 to a verifier and these attestation results to a relying party.
 Additionally, the WG will standardize formats for endorsements and reference values,
-but protocols and associated procedures for conveying them to the verifier are out of scope.
+and may profile existing protocols (e.g. CoAP or DTLS) to conveying them to the verifier.
 Formats and protocols for appraisal policy for evidence and appraisal policy for
 attestation results are also out of scope.
 
