@@ -70,3 +70,6 @@ model (e.g., CBOR Web Token structures [RFC8392], JSON Web Token structures
 
 6. Standardize interoperable data formats to securely declare and convey endorsements
 and reference values.
+
+7. Standardize interoperable data formats for freshness indicators to be used in
+conveyance protocols for evidence and attestation results.
