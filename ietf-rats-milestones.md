@@ -1,5 +1,6 @@
+
 | Date | Milestone | I-D
-|---
+| --- | --- | ---
 | Jul 2021 | Submit Architecture draft to IESG for publication | draft-ietf-rats-architecture
 | Jul 2021 | Submit Interaction Models draft to IESG for publication | draft-ietf-rats-reference-interaction-models
 | Mar 2021 | Submit RIV draft to IESG for publication | draft-ietf-rats-tpm-based-network-device-attest
