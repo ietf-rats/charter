@@ -23,7 +23,7 @@ party may require evidence about:
 * other factors that could influence trust decisions.
 
 While domain-specific attestation mechanisms such as Trusted Computing Group
-(TCG) Trusted Platform Module (TPM)/Trusted Software Stack (TSS), Fast Identity
+(TCG) Trusted Platform Module (TPM)/TPM Software Stack (TSS), Fast Identity
 Online (FIDO) Alliance attestation, and Android Keystore attestation exist,
 there is no interoperable way to create and process attestation evidence to
 make determinations about system components among relying parties of different
@@ -37,12 +37,12 @@ It will standardize formats for describing evidence and attestation results;
 and the associated procedures and protocols to convey this evidence for appraisal
 to a verifier and these attestation results to a relying party.
 Additionally, the WG will standardize formats for endorsements and reference values,
-and may apply and/or profile existing protocols (e.g. CoAP or DTLS) to convey them to the verifier.
+and may apply and/or profile existing protocols (e.g. DTLS, CoAP or MUD) to convey them to the verifier.
 Formats and protocols for appraisal policy for evidence and appraisal policy for
 attestation results are also out of scope.
 
 The WG will continue to cooperate and coordinate with other IETF WGs such as
-TEEP and SUIT, and work with organizations in the community, such as the TCG
+TEEP and SUIT, and work with organizations in the community, such as the TCG, Global Platform,
 and the FIDO Alliance, as appropriate.
 
 Program of Work
