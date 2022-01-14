@@ -37,13 +37,13 @@ It will standardize formats for describing evidence and attestation results;
 and the associated procedures and protocols to convey this evidence for appraisal
 to a verifier and these attestation results to a relying party.
 Additionally, the WG will standardize formats for endorsements and reference values,
-and may apply and/or profile existing protocols (e.g. DTLS, CoAP or MUD) to convey them to the verifier.
-Formats and protocols for appraisal policy for evidence and appraisal policy for
-attestation results are also out of scope.
+and may apply and/or profile existing protocols (e.g. DTLS, CoAP, or MUD) to convey them
+to the verifier. Formats and protocols for appraisal policy for evidence and appraisal
+policy for attestation results are also out of scope.
 
 The WG will continue to cooperate and coordinate with other IETF WGs such as
-TEEP and SUIT, and work with organizations in the community, such as the TCG, Global Platform,
-and the FIDO Alliance, as appropriate.
+TEEP and SUIT, and work with organizations in the community, such as the TCG,
+Global Platform, and the FIDO Alliance, as appropriate.
 
 Program of Work
 ===============
@@ -60,7 +60,8 @@ The architecture may include a system security model for the signing key
 material and involve at least the system component, system component provider,
 and the relying authority.
 
-3. Standardize an information model for evidence and attestations results scoped by the specified use-cases.
+3. Standardize an information model for evidence and attestations results scoped by the
+specified use-cases.
 
 4. Standardize data models that implement and secure the defined information
 model (e.g., CBOR Web Token structures [RFC8392], JSON Web Token structures
