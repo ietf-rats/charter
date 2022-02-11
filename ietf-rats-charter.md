@@ -15,7 +15,7 @@ party may require evidence about:
 * system component identity,
 * composition of system components, including nested components,
 * roots of trust,
-* assertion/claim origination or provenance,
+* an assertion/claim origination or provenance,
 * manufacturing origin,
 * system component integrity,
 * system component configuration,
@@ -39,7 +39,7 @@ to a verifier and these attestation results to a relying party.
 Additionally, the WG will standardize formats for endorsements and reference values,
 and may apply and/or profile existing protocols (e.g. DTLS, CoAP, or MUD) to convey them
 to the verifier. Formats and protocols for appraisal policy for evidence and appraisal
-policy for attestation results are also out of scope.
+policy for attestation results are out of scope.
 
 The WG will continue to cooperate and coordinate with other IETF WGs such as
 TEEP and SUIT, and work with organizations in the community, such as the TCG,
@@ -56,9 +56,6 @@ follows:
 consensus but not expected to be published as an RFC).
 
 2. Specify terminology and architecture that enable attestation techniques.
-The architecture may include a system security model for the signing key
-material and involve at least the system component, system component provider,
-and the relying authority.
 
 3. Standardize an information model for evidence and attestations results scoped by the
 specified use-cases.
