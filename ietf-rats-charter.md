@@ -40,11 +40,11 @@ Goals
 =====
 
 The WG has defined an architecture (draft-ietf-rats-architecture) for remote attestation.
-The WG will standardize formats for describing evidence and attestation results;
-and the associated procedures and protocols to convey this evidence for appraisal
-to a verifier and these attestation results to a relying party.
+The WG will standardize formats for describing evidence and attestation results
+and the associated procedures and protocols to convey evidence for appraisal
+to a verifier and attestation results to a relying party.
 Additionally, the WG will standardize formats for endorsements and reference values,
-and may apply and/or profile existing protocols (e.g. DTLS, CoAP, or MUD) to convey them
+and may apply and/or profile existing protocols (e.g., DTLS, CoAP, or MUD) to convey them
 to the verifier. Formats and protocols for appraisal policy for evidence and appraisal
 policy for attestation results are out of scope.
 
