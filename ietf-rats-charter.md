@@ -3,10 +3,10 @@ Introduction
 
 In network protocol exchanges, it is often the case that one entity (a Relying
 Party) requires evidence about the remote peer (and system components [RFC4949]
-thereof), in order to assess the trustworthiness of the peer.  Remote
-attestation procedures (RATS) determine whether relying parties can establish a level of
-confidence in the trustworthiness of remote peers, called Attesters. 
-The objective is achieved by a two-stage appraisal procedure facilitated by a trusted third
+thereof), in order to provide authenticated claims about the peer and assess the trustworthiness of the peer.  Remote
+attestation procedures (RATS) allow relying parties to determine their level of
+trust in remote peers, called Attesters. 
+The objective is achieved by a two-stage appraisal procedure facilitated by a trusted 
 party, called Verifier, with trusted links to the supply chain.
 
 The two stage's procedures are:
@@ -17,7 +17,9 @@ Endorsements and References Values, to create Attestation Results from Evidence.
 Results associated with an Attester's Evidence that originates from a trusted Verifier.
 The results are trust decisions regarding the Attester.
 
-To improve the confidence in a system component's trustworthiness, a relying
+Note that these two stages may be combined and implemented together by the same party.
+
+To establish a system component's trustworthiness, a relying
 party may require evidence about:
 * system component identity,
 * composition of system components, including nested components,
