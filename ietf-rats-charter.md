@@ -71,7 +71,8 @@ specified use-cases.
 model (e.g., CBOR Web Token structures [RFC8392], JSON Web Token structures
 [RFC7519]).
 
-5. Standardize interoperable protocols to securely convey evidence and attestation results. Strong preference to use existing protocols.
+5. Standardize interoperable protocols to securely convey evidence and attestation results 
+with a strong preference to use existing protocols.
 
 6. Standardize interoperable data formats to securely declare and convey endorsements
 and reference values.
