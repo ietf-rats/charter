@@ -9,11 +9,11 @@ confidence in the trustworthiness of remote peers, called Attesters.
 The objective is achieved by a two-stage appraisal procedure facilitated by a trusted third
 party, called Verifier, with trusted links to the supply chain.
 
-The two stage's procedures are:
+The procedures for the two stages are:
 
 * Evidence Appraisal: a Verifier applies policy and supply chain input, such as
 Endorsements and References Values, to create Attestation Results from Evidence.
-* Attestation Result Appraisal: a Relying Party applies policy to Attestation
+* Attestation Results Appraisal: a Relying Party applies policy to Attestation
 Results associated with an Attester's Evidence that originates from a trusted Verifier.
 The results are trust decisions regarding the Attester.
 
